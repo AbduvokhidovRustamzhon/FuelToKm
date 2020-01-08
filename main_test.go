@@ -5,14 +5,12 @@ import "testing"
 func Test_distanceCalculation(t *testing.T) {
 
 	tests := []struct {
+		name string
 		consumption int
 		fuel int
 		want int
 	} {
-		{10, 10, 90},
-		{20,20,90},
-		{30,30,90},
-		{40,30,68},
+		{"The distance it travels for the available fuel", 100, 10,9},
 	}
 	for _, test := range tests {
 		got := distanceCalculation(test.consumption, test.fuel)
